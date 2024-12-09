@@ -41,7 +41,7 @@ jobs:
         path: terraform.plan
 
   terraform-apply:
-    name: Terraform Test Job
+    name: Terraform Apply Job
     runs-on: ubunthu-latest
     needs: terraform-plan
   
