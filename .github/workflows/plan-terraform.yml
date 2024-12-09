@@ -13,7 +13,7 @@ env:
 
 jobs:
   terraform-plan:
-    name: Terraform Test Job
+    name: 'Terraform Plan Job'
     runs-on: ubunthu-latest
   
     steps:
@@ -23,7 +23,7 @@ jobs:
     - name: Azure login
       uses: azure/login@v2
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS}}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
@@ -41,7 +41,7 @@ jobs:
         path: terraform.plan
 
   terraform-apply:
-    name: Terraform Apply Job
+    name: 'Terraform Apply Job'
     runs-on: ubunthu-latest
     needs: terraform-plan
   
@@ -60,6 +60,7 @@ jobs:
       with: 
         name: terraform-plan
         path: .
+        
     - name: Apply the terraform plan
       run: terraform apply -auto-approve terraform.plan
 
