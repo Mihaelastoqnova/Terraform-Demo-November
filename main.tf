@@ -5,7 +5,7 @@ terraform {
       version = "4.13.0"
     }
   }
-  backend "azurerm" { 
+  backend "azurerm" {
     resource_group_name  = "StorageRG"
     storage_account_name = "taskboardstoragemiha"
     container_name       = "taskboardstoragemihacontainer"
