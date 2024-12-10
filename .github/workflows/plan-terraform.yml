@@ -14,7 +14,7 @@ env:
 jobs:
   terraform-plan:
     name: 'Terraform Plan Job'
-    runs-on: ubunthu-latest
+    runs-on: ubuntu-latest
   
     steps:
     - name: Checkout the repository
