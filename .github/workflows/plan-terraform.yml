@@ -42,7 +42,7 @@ jobs:
 
   terraform-apply:
     name: 'Terraform Apply Job'
-    runs-on: ubunthu-latest
+    runs-on: ubuntu-latest
     needs: terraform-plan
   
     steps:
